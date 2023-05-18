@@ -8,6 +8,8 @@ from sklearn import linear_model
 from sklearn.linear_model import Perceptron
 from sklearn.naive_bayes import GaussianNB
 from sklearn import svm
+from sklearn import tree
+from sklearn import neighbors
 
 df = pd.read_csv('log2.csv').to_numpy()
 # missing_values = df.isnull().sum()
@@ -78,7 +80,7 @@ print('Perceptron')
 print('\n Matriz de confusion: col - realidad, filas - predicc\n')
 print(confusion_matrix(y_pred, y_test))
 #precision - accuracy
-print('\n Accuracy Reg_Lin: %.4f' % accuracy_score(y_pred, y_test ))
+print('\n Accuracy Perceptron: %.4f' % accuracy_score(y_pred, y_test ))
 
 # Metlin
 y_pred = Clasif.fit(X_train, y_train).predict(X_test)
@@ -86,7 +88,7 @@ print('Metlin')
 print('\n Matriz de confusion: col - realidad, filas - predicc\n')
 print(confusion_matrix(y_pred, y_test))
 #precision - accuracy
-print('\n Accuracy Reg_Lin: %.4f' % accuracy_score(y_pred, y_test ))
+print('\n Accuracy Metlin: %.4f' % accuracy_score(y_pred, y_test ))
 
 # Naive Bayes
 Clasif = GaussianNB()
@@ -95,15 +97,33 @@ print('Naive Bayes')
 print('\n Matriz de confusion: col - realidad, filas - predicc\n')
 print(confusion_matrix(y_pred, y_test))
 #precision - accuracy
-print('\n Accuracy Reg_Lin: %.4f' % accuracy_score(y_pred, y_test ))
+print('\n Accuracy Naive Bayes: %.4f' % accuracy_score(y_pred, y_test ))
 
-# SVM no lineal
-# Clasif = svm.SVC(kernel="rbf", C=10)
-# Clasif = svm.SVC(kernel="rbf", gamma=0.2)
-Clasif = svm.SVC(kernel="rbf", C=10, gamma=0.2)
+# # SVM no lineal
+# # Clasif = svm.SVC(kernel="rbf", C=10)
+# # Clasif = svm.SVC(kernel="rbf", gamma=0.2)
+# Clasif = svm.SVC(kernel="rbf", C=0.1)
+# y_pred = Clasif.fit(X_train, y_train).predict(X_test)
+# print('SVM no lineal')
+# print('\n Matriz de confusion: col - realidad, filas - predicc\n')
+# print(confusion_matrix(y_pred, y_test))
+# #precision - accuracy
+# print('\n Accuracy SVM no lineal: %.4f' % accuracy_score(y_pred, y_test ))
+
+
+# Trees
+Clasif = tree.DecisionTreeClassifier()
 y_pred = Clasif.fit(X_train, y_train).predict(X_test)
-print('SVM no lineal')
+print('Trees')
 print('\n Matriz de confusion: col - realidad, filas - predicc\n')
 print(confusion_matrix(y_pred, y_test))
 #precision - accuracy
-print('\n Accuracy Reg_Lin: %.4f' % accuracy_score(y_pred, y_test ))
+print('\n Accuracy Trees: %.4f' % accuracy_score(y_pred, y_test ))
+
+# KNN 
+Clasif = neighbors.KNeighborsClassifier(15, weights="distance")
+y_pred = Clasif.fit(X_train, y_train).predict(X_test)
+print('\n Matriz de confusion: col - realidad, filas - predicc\n')
+print(confusion_matrix(y_pred, y_test))
+#precision - accuracy
+print('\n Accuracy KNN: %.4f' % accuracy_score(y_pred, y_test ))
