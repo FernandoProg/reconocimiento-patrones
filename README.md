@@ -59,6 +59,7 @@ Sin embargo, es importante tener en cuenta que la reducción de dimensionalidad 
 - Con reducción de dimensionalidad balanceadas a 2 caractarísticas obtenemos una precisión del 0.6976
 - Con reducción de dimensionalidad balanceadas a 3 caractarísticas obtenemos una precisión del 0.9162
 - Con reducción de dimensionalidad balanceadas a 5 caractarísticas obtenemos una precisión del 0.6704
+  
 En este caso, por la importancia relativa de las clases puede ser preferible permitir que el modelo se concentre más en la clase minoritaria o en la clase de mayor importancia, en lugar de tratar de equilibrar las clases. Eso se demuestra anteriormente donde ocupar balanceo de clases minimiza la precisión del clasificador.
 
 ## Problema 2.
