@@ -68,11 +68,11 @@ Los métodos utilizados fueron kNN, NBC y SVM. Escogidos por sus dispares proced
 - NBC utiliza el teorema de Bayes para realizar un aprendizaje basado en probabilidad
 - SVM es un clasificador supervisado que busca la separación óptima de las clases mediante la creación de hiperplanos
 ### 3. ¿Cuál es la metodología empleada en el trabajo? ¿Cómo se diseñan los experimentos? ¿Qué tipos de datos se emplean? ¿Qué métricas se usan para medir los resultados?, etc.
-1. ENSAYO DE PARTÍCULAS MAGNÉTICAS EN ESTRUCTURAS MARINAS
+1. ENSAYO DE PARTÍCULAS MAGNÉTICAS EN ESTRUCTURAS MARINAS: La estructuras dañadas son extraídas y utilizadas en un ensayo de partículas magnéticas donde se busca encontrar fallas estructurales, para luego rociar con partículas de hierro reflectantes bajo luz UV para que se acoplen a las partes que presentan fallas haciendo mas fácil la toma de una imagen bajo luz UV.
 2. EXTRACCIÓN DE MUESTRAS
     1. Captura de imágenes: Las imágenes fueron capturadas manualmente con estación de visión por computador y una cámara color IDS UI-6230SE-C colocada sobre un brazo de 6 grados de libertad sobre la pieza a inspeccionar a una distancia de un metro. La iluminación empleada consistió un sistema de radiación UV-A de 365 nm
-    2. Procesado de imágenes
-    3. Extracción de características
+    2. Procesado de imágenes: La imágenes son procesadas buscando el reducir ruidos, resaltar elementos de interés, suavizar objetos, realizar transformaciones morfológicas, realizar cambios de espacios de color, etc. y luego estas imágenes son utilizadas bajo distintos espacios de color para facilitar la extracción de información.
+    3. Extracción de características: Se utilizan imágenes de estructura clasificadas como defectuosas para luego extraer distintas características como las dimensiones de la falla, intensidad de los pixeles bajo distintos espacios de color, etc.
 3. ENTRENAMIENTO DE LOS MODELOS
 4. VERIFICACIÓN DE RESULTADOS
 ### 4. ¿Cuáles fueron los resultados del trabajo y que se concluyó? Discuta gráficos, comparaciones, etc
