@@ -1,11 +1,12 @@
 # reconocimiento-patrones
 
-## Dataset
-Pincha [aqui](https://archive.ics.uci.edu/ml/datasets/Internet+Firewall+Data) para mas informacion del dataset
+## Bibliografia
+[Dataset](https://archive.ics.uci.edu/ml/datasets/Internet+Firewall+Data): Este conjunto de datos se recopiló a partir de los registros de tráfico de internet del cortafuegos de una universidad.  
+[Artículo](https://www.researchgate.net/profile/Pedro-Navarro-Lorente/publication/328335601_Sistema_de_aprendizaje_basado_en_vision_por_computador_para_la_inspeccion_automatizada_de_particulas_magneticas_en_estructuras_marinas/links/5bc71e8d299bf17a1c56289b/Sistema-de-aprendizaje-basado-en-vision-por-computador-para-la-inspeccion-automatizada-de-particulas-magneticas-en-estructuras-marinas.pdf): Sistema de aprendizaje basado en visión por computador para la inspección automatizada de partículas magnéticas en estructuras marinas
 
 ## Problema 1.
 
-## 1. Describa el dataset, identificando las características y la variable de clasificación, que tipo de datos es cada una, y que valores toma la variable de clasificación. ¿El dataset presenta datos faltantes?  
+### 1. Describa el dataset, identificando las características y la variable de clasificación, que tipo de datos es cada una, y que valores toma la variable de clasificación. ¿El dataset presenta datos faltantes?  
 |                      | Característica | Clasificador | Tipo de dato | Valores                              |
 |----------------------|----------------|--------------|--------------|--------------------------------------|
 | Source Port          |        x       |              |     int64    |                                      |
@@ -22,7 +23,7 @@ Pincha [aqui](https://archive.ics.uci.edu/ml/datasets/Internet+Firewall+Data) pa
 | pkts_received        |        x       |              |     int64    |                                      |
 No hay datos faltantes en el dataset.
 
-## 2. Para el clasificador que propone como solución modifique los parámetros que tiene disponibles en la implementación de sklearn. Construya una tabla como la que aparece a continuación y escoja cuáles son los valores óptimos de los parámetros (pruebe al menos con 5 valores de los parámetros). Tome uno de los parámetros y grafique su relación con la métrica de desempeño. Interprete esta gráfica de acuerdo con el posible underfitting u overfitting del modelo.
+### 2. Para el clasificador que propone como solución modifique los parámetros que tiene disponibles en la implementación de sklearn. Construya una tabla como la que aparece a continuación y escoja cuáles son los valores óptimos de los parámetros (pruebe al menos con 5 valores de los parámetros). Tome uno de los parámetros y grafique su relación con la métrica de desempeño. Interprete esta gráfica de acuerdo con el posible underfitting u overfitting del modelo.
 | criterion | splitter | min_impurity_decrease | max_leaf_nodes | max_depth | accuracy promedio por clase |
 |-----------|----------|-----------------------|----------------|-----------|-----------------------------|
 | gini      | best     | 0.09                  | 66             | 2         | 0.9795523906408952          |
@@ -32,7 +33,7 @@ No hay datos faltantes en el dataset.
 | entropy   | random   | 0.09                  | 66             | 2         | 0.9474059003051882          |
 | log_loss  | random   | 0.09                  | 66             | 2         | 0.9712105798575789          |
 
-## 3. Del clasificador que propone como solución del problema entregue una tabla que muestre los resultados de la matriz de confusión, así como los valores de las métricas de recall y precision de cada clase. Tome como referencia la que aparece a continuación. Interprete un valor de recall y precision. Obtenga las métricas de accuracy y accuracy promedio por clase, comente la diferencia entre estos valores
+### 3. Del clasificador que propone como solución del problema entregue una tabla que muestre los resultados de la matriz de confusión, así como los valores de las métricas de recall y precision de cada clase. Tome como referencia la que aparece a continuación. Interprete un valor de recall y precision. Obtenga las métricas de accuracy y accuracy promedio por clase, comente la diferencia entre estos valores
 |            | allow | drop  | deny  | reset-both | Recall |
 |------------|-------|-------|-------|------------|--------|
 | allow      | 5612  | 0     | 0     | 0          | 1.000  |
@@ -48,7 +49,23 @@ El valor de Recall en la fila allow es de 1 lo que nos indica que el modelo es c
 - Con reduccion de dimensionalidad balanceadas a 3 caractarísticas obtenemos una precisión del 0.9230
 - Con reduccion de dimensionalidad balanceadas a 5 caractarísticas obtenemos una precisión del 0.9228
 
-## 5. Ocupe algún método de balanceo de clases de ser necesario y evalúe su impacto en las soluciones obtenidas (compare las métricas de desempeño y la matriz de confusión).
+### 5. Ocupe algún método de balanceo de clases de ser necesario y evalúe su impacto en las soluciones obtenidas (compare las métricas de desempeño y la matriz de confusión).
 - Con reduccion de dimensionalidad balanceadas a 2 caractarísticas obtenemos una precisión del 0.6976
 - Con reduccion de dimensionalidad balanceadas a 3 caractarísticas obtenemos una precisión del 0.9162
 - Con reduccion de dimensionalidad balanceadas a 5 caractarísticas obtenemos una precisión del 0.6704
+
+## Problema 2.
+
+### 1. ¿Cuál es el problema práctico que se busca resolver? ¿Por qué es relevante? ¿Por qué se propone resolverlo mediante métodos de reconocimiento de patrones?
+El artículo propuesto titulado "Sistema de aprendizaje basado en visión por computadora para la inspección automatizada de partículas magnéticas en estructuras marinas" aborda el problema de la inspección de partículas magnéticas en estructuras marinas. Este problema es relevante debido a que las estructuras marinas, como plataformas petroleras, barcos y tuberías submarinas, están expuestas a condiciones ambientales adversas y pueden sufrir daños o corrosión a lo largo del tiempo. La detección y evaluación temprana de defectos y fallas en estas estructuras es crucial para garantizar su integridad y seguridad.  
+
+El método propuesto para abordar este problema es mediante técnicas de reconocimiento de patrones basadas en visión por computadora. Estos métodos se utilizan porque permiten analizar y procesar de manera eficiente grandes volúmenes de datos visuales para detectar patrones y anomalías. En el caso de la inspección automatizada de partículas magnéticas, se utilizan cámaras y algoritmos de visión por computadora para capturar imágenes de las estructuras marinas y analizarlas en busca de partículas magnéticas y posibles defectos.  
+
+El uso de métodos de reconocimiento de patrones en este contexto ofrece varias ventajas. Permite una inspección más rápida y precisa en comparación con los métodos manuales tradicionales. Además, al automatizar el proceso de inspección, se reduce la dependencia de operadores humanos y se minimizan los errores humanos. Esto resulta en una mayor eficiencia y confiabilidad en la detección de defectos en las estructuras marinas.
+### 2. ¿Qué métodos de clasificación se emplean en el trabajo? ¿Por qué éstos y no otros?
+
+### 3. ¿Cuál es la metodología empleada en el trabajo? ¿Cómo se diseñan los experimentos? ¿Qué tipos de datos se emplean? ¿Qué métricas se usan para medir los resultados?, etc.
+
+### 4. ¿Cuáles fueron los resultados del trabajo y que se concluyó? Discuta gráficos, comparaciones, etc
+
+### 5. ¿Qué hubiese hecho usted diferente? ¿Por qué?
