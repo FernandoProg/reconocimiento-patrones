@@ -63,9 +63,18 @@ El método propuesto para abordar este problema es mediante técnicas de reconoc
 
 El uso de métodos de reconocimiento de patrones en este contexto ofrece varias ventajas. Permite una inspección más rápida y precisa en comparación con los métodos manuales tradicionales. Además, al automatizar el proceso de inspección, se reduce la dependencia de operadores humanos y se minimizan los errores humanos. Esto resulta en una mayor eficiencia y confiabilidad en la detección de defectos en las estructuras marinas.
 ### 2. ¿Qué métodos de clasificación se emplean en el trabajo? ¿Por qué éstos y no otros?
-
+Los métodos utilizados fueron kNN, NBC y SVM. Escogidos por sus dispares procedimientos de clasificación que se describen a continuación
+- kNN es un método de clasificación no-paramétrico en espacios multidimensionales
+- NBC utiliza el teorema de Bayes para realizar un aprendizaje basado en probabilidad
+- SVM es un clasificador supervisado que busca la separación óptima de las clases mediante la creación de hiperplanos
 ### 3. ¿Cuál es la metodología empleada en el trabajo? ¿Cómo se diseñan los experimentos? ¿Qué tipos de datos se emplean? ¿Qué métricas se usan para medir los resultados?, etc.
-
+1. ENSAYO DE PARTÍCULAS MAGNÉTICAS EN ESTRUCTURAS MARINAS
+2. EXTRACCIÓN DE MUESTRAS
+    1. Captura de imágenes: Las imágenes fueron capturadas manualmente con estación de visión por computador y una cámara color IDS UI-6230SE-C colocada sobre un brazo de 6 grados de libertad sobre la pieza a inspeccionar a una distancia de un metro. La iluminación empleada consistió un sistema de radiación UV-A de 365 nm
+    2. Procesado de imágenes
+    3. Extracción de características
+3. ENTRENAMIENTO DE LOS MODELOS
+4. VERIFICACIÓN DE RESULTADOS
 ### 4. ¿Cuáles fueron los resultados del trabajo y que se concluyó? Discuta gráficos, comparaciones, etc
 
 ### 5. ¿Qué hubiese hecho usted diferente? ¿Por qué?
