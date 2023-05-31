@@ -41,6 +41,8 @@ No hay datos faltantes en el dataset.
 | reset-both | 0     | 0     | 0     | 0          | 0.000  |
 | Precision  | 0.988 | 0.943 | 1.000 | 0.000      |        |
 
+El valor de Recall en la fila allow es de 1 lo que nos indica que el modelo es capaz de clasificar de manera correcta el 100% de las veces los datos pertenecientes a esta clase, pero al mirar el valor de Precision de la columna allow podemos notar que no es 1, sino que tiene un valor de 0.988 lo que significa que aunque clasifique de manera correcta todos los datos de la clase allow, no todos los datos clasificados como allow estan correctos ya que en este ejemplo tenemos 67 datos de tipo deny como falsos positivos.
+
 ## 4. Ocupe alguno de los métodos vistos en clase para reducir la dimensión de las características del problema y evalúe su impacto en las soluciones obtenidas (compare las métricas de desempeño). Pruebe al menos con la mitad de las características y con dos características. 
 - Con reduccion de dimensionalidad balanceadas a 2 caractarísticas obtenemos una precisión del 0.7404
 - Con reduccion de dimensionalidad balanceadas a 3 caractarísticas obtenemos una precisión del 0.9230
