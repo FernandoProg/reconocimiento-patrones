@@ -3,16 +3,25 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn import tree
-import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler 
 
 df = pd.read_csv('log2.csv').to_numpy()
 # missing_values = df.isnull().sum()
 caracteristicas = df[:,np.array([0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11])]
 Y = df[:,np.array([4])]
 X_train, X_test, y_train, y_test = train_test_split(caracteristicas, Y, test_size=0.15, random_state=27)
+pca = PCA(n_components=5)
+pca.fit(X_train)
+Xtrain_pca=pca.transform(X_train)
+Xtest_pca=pca.transform(X_test)
+scaler = StandardScaler()  
+scaler.fit(Xtrain_pca)  
+Xtrain_pca = scaler.transform(Xtrain_pca)  
+Xtest_pca = scaler.transform(Xtest_pca)
 # Trees
 Clasif = tree.DecisionTreeClassifier(criterion='gini', splitter='best',min_impurity_decrease=0.09, max_leaf_nodes=66, max_depth=2)
-y_pred = Clasif.fit(X_train, y_train).predict(X_test)
+y_pred = Clasif.fit(Xtrain_pca, y_train).predict(Xtest_pca)
 print('Trees')
 print('\n Matriz de confusion: col - realidad, filas - predicc\n')
 print(confusion_matrix(y_pred, y_test))
