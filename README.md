@@ -6,7 +6,6 @@ Pincha [aqui](https://archive.ics.uci.edu/ml/datasets/Internet+Firewall+Data) pa
 ## Problema 1.
 
 ## 1. Describa el dataset, identificando las características y la variable de clasificación, que tipo de datos es cada una, y que valores toma la variable de clasificación. ¿El dataset presenta datos faltantes?  
-#
 |                      | Característica | Clasificador | Tipo de dato | Valores                              |
 |----------------------|----------------|--------------|--------------|--------------------------------------|
 | Source Port          |        x       |              |     int64    |                                      |
@@ -24,7 +23,6 @@ Pincha [aqui](https://archive.ics.uci.edu/ml/datasets/Internet+Firewall+Data) pa
 No hay datos faltantes en el dataset.
 
 ## 2. Para el clasificador que propone como solución modifique los parámetros que tiene disponibles en la implementación de sklearn. Construya una tabla como la que aparece a continuación y escoja cuáles son los valores óptimos de los parámetros (pruebe al menos con 5 valores de los parámetros). Tome uno de los parámetros y grafique su relación con la métrica de desempeño. Interprete esta gráfica de acuerdo con el posible underfitting u overfitting del modelo.
-#
 | criterion | splitter | min_impurity_decrease | max_leaf_nodes | max_depth | accuracy promedio por clase |
 |-----------|----------|-----------------------|----------------|-----------|-----------------------------|
 | gini      | best     | 0.09                  | 66             | 2         | 0.9795523906408952          |
@@ -35,7 +33,6 @@ No hay datos faltantes en el dataset.
 | log_loss  | random   | 0.09                  | 66             | 2         | 0.9712105798575789          |
 
 ## 3. Del clasificador que propone como solución del problema entregue una tabla que muestre los resultados de la matriz de confusión, así como los valores de las métricas de recall y precision de cada clase. Tome como referencia la que aparece a continuación. Interprete un valor de recall y precision. Obtenga las métricas de accuracy y accuracy promedio por clase, comente la diferencia entre estos valores
-#
 |            | allow | drop  | deny  | reset-both | Recall |
 |------------|-------|-------|-------|------------|--------|
 | allow      | 5612  | 0     | 0     | 0          | 1.000  |
@@ -49,7 +46,7 @@ Con reduccion de dimensionalidad a 2 caractarísticas obtenemos una precisión d
 Con reduccion de dimensionalidad a 3 caractarísticas obtenemos una precisión del 0.9477
 Con reduccion de dimensionalidad a 5 caractarísticas obtenemos una precisión del 0.9477
 
-### 5. Ocupe algún método de balanceo de clases de ser necesario y evalúe su impacto en las soluciones obtenidas (compare las métricas de desempeño y la matriz de confusión).
+## 5. Ocupe algún método de balanceo de clases de ser necesario y evalúe su impacto en las soluciones obtenidas (compare las métricas de desempeño y la matriz de confusión).
 Con reduccion de dimensionalidad balanceadas a 2 caractarísticas obtenemos una precisión del 0.7404
 Con reduccion de dimensionalidad balanceadas a 3 caractarísticas obtenemos una precisión del 0.9230
 Con reduccion de dimensionalidad balanceadas a 5 caractarísticas obtenemos una precisión del 0.9228
