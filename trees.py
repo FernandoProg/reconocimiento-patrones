@@ -20,7 +20,7 @@ scaler.fit(Xtrain_pca)
 Xtrain_pca = scaler.transform(Xtrain_pca)  
 Xtest_pca = scaler.transform(Xtest_pca)
 # Trees
-Clasif = tree.DecisionTreeClassifier(criterion='gini', splitter='best',min_impurity_decrease=0.09, max_leaf_nodes=66, max_depth=2)
+Clasif = tree.DecisionTreeClassifier(criterion='gini', splitter='best',min_impurity_decrease=0.09, max_leaf_nodes=66, max_depth=2, class_weight='balanced')
 y_pred = Clasif.fit(Xtrain_pca, y_train).predict(Xtest_pca)
 print('Trees')
 print('\n Matriz de confusion: col - realidad, filas - predicc\n')

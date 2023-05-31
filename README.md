@@ -42,11 +42,11 @@ No hay datos faltantes en el dataset.
 | Precision  | 0.988 | 0.943 | 1.000 | 0.000      |        |
 
 ## 4. Ocupe alguno de los métodos vistos en clase para reducir la dimensión de las características del problema y evalúe su impacto en las soluciones obtenidas (compare las métricas de desempeño). Pruebe al menos con la mitad de las características y con dos características. 
-Con reduccion de dimensionalidad a 2 caractarísticas obtenemos una precisión del 0.9477
-Con reduccion de dimensionalidad a 3 caractarísticas obtenemos una precisión del 0.9477
-Con reduccion de dimensionalidad a 5 caractarísticas obtenemos una precisión del 0.9477
+- Con reduccion de dimensionalidad balanceadas a 2 caractarísticas obtenemos una precisión del 0.7404
+- Con reduccion de dimensionalidad balanceadas a 3 caractarísticas obtenemos una precisión del 0.9230
+- Con reduccion de dimensionalidad balanceadas a 5 caractarísticas obtenemos una precisión del 0.9228
 
 ## 5. Ocupe algún método de balanceo de clases de ser necesario y evalúe su impacto en las soluciones obtenidas (compare las métricas de desempeño y la matriz de confusión).
-Con reduccion de dimensionalidad balanceadas a 2 caractarísticas obtenemos una precisión del 0.7404
-Con reduccion de dimensionalidad balanceadas a 3 caractarísticas obtenemos una precisión del 0.9230
-Con reduccion de dimensionalidad balanceadas a 5 caractarísticas obtenemos una precisión del 0.9228
+- Con reduccion de dimensionalidad balanceadas a 2 caractarísticas obtenemos una precisión del 0.6976
+- Con reduccion de dimensionalidad balanceadas a 3 caractarísticas obtenemos una precisión del 0.9162
+- Con reduccion de dimensionalidad balanceadas a 5 caractarísticas obtenemos una precisión del 0.6704
