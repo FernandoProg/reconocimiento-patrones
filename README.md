@@ -21,6 +21,7 @@
 | Elapsed Time (sec)   |        x       |              |     int64    |                                      |
 | pkts_sent            |        x       |              |     int64    |                                      |
 | pkts_received        |        x       |              |     int64    |                                      |
+
 No hay datos faltantes en el dataset.
 
 ### 2. Para el clasificador que propone como solución modifique los parámetros que tiene disponibles en la implementación de sklearn. Construya una tabla como la que aparece a continuación y escoja cuáles son los valores óptimos de los parámetros (pruebe al menos con 5 valores de los parámetros). Tome uno de los parámetros y grafique su relación con la métrica de desempeño. Interprete esta gráfica de acuerdo con el posible underfitting u overfitting del modelo.
@@ -59,7 +60,7 @@ Sin embargo, es importante tener en cuenta que la reducción de dimensionalidad 
 - Con reducción de dimensionalidad balanceadas a 2 caractarísticas obtenemos una precisión del 0.6976
 - Con reducción de dimensionalidad balanceadas a 3 caractarísticas obtenemos una precisión del 0.9162
 - Con reducción de dimensionalidad balanceadas a 5 caractarísticas obtenemos una precisión del 0.6704
-  
+
 En este caso, por la importancia relativa de las clases puede ser preferible permitir que el modelo se concentre más en la clase minoritaria o en la clase de mayor importancia, en lugar de tratar de equilibrar las clases. Eso se demuestra anteriormente donde ocupar balanceo de clases minimiza la precisión del clasificador.
 
 ## Problema 2.
