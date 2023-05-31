@@ -45,14 +45,21 @@ No hay datos faltantes en el dataset.
 El valor de Recall en la fila allow es de 1 lo que nos indica que el modelo es capaz de clasificar de manera correcta el 100% de las veces los datos pertenecientes a esta clase, pero al mirar el valor de Precision de la columna allow podemos notar que no es 1, sino que tiene un valor de 0.988 lo que significa que aunque clasifique de manera correcta todos los datos de la clase allow, no todos los datos clasificados como allow estan correctos ya que en este ejemplo tenemos 67 datos de tipo deny como falsos positivos.
 
 ## 4. Ocupe alguno de los métodos vistos en clase para reducir la dimensión de las características del problema y evalúe su impacto en las soluciones obtenidas (compare las métricas de desempeño). Pruebe al menos con la mitad de las características y con dos características. 
-- Con reducción de dimensionalidad balanceadas a 2 caractarísticas obtenemos una precisión del 0.7404
-- Con reducción de dimensionalidad balanceadas a 3 caractarísticas obtenemos una precisión del 0.9230
-- Con reducción de dimensionalidad balanceadas a 5 caractarísticas obtenemos una precisión del 0.9228
+- Con reducción de dimensionalidad a 2 caractarísticas obtenemos una precisión del 0.7404
+- Con reducción de dimensionalidad a 3 caractarísticas obtenemos una precisión del 0.9230
+- Con reducción de dimensionalidad a 5 caractarísticas obtenemos una precisión del 0.9228
+
+Al utilizar PCA en conjunción con árboles de decisión, se selecciona un subconjunto de componentes principales que capturan la mayor parte de la variabilidad de los datos. Al reducir la dimensionalidad, se eliminan las características menos importantes o redundantes, lo que simplifica el modelo de árbol de decisión.  
+
+Esta reducción de dimensionalidad tiene varios beneficios. En primer lugar, reduce la complejidad del árbol de decisión, ya que se trabaja con un conjunto más pequeño de características. Esto puede facilitar la interpretación y comprensión del modelo. Además, al eliminar características irrelevantes o redundantes, se reduce el riesgo de sobreajuste, lo que permite que el modelo se generalice mejor a nuevos datos.  
+
+Sin embargo, es importante tener en cuenta que la reducción de dimensionalidad con PCA también puede implicar cierta pérdida de información, ya que se descartan las características menos importantes. Por lo tanto, es crucial evaluar el equilibrio entre la simplificación del modelo y la preservación de la información relevante para el problema de clasificación en cuestión.
 
 ### 5. Ocupe algún método de balanceo de clases de ser necesario y evalúe su impacto en las soluciones obtenidas (compare las métricas de desempeño y la matriz de confusión).
 - Con reducción de dimensionalidad balanceadas a 2 caractarísticas obtenemos una precisión del 0.6976
 - Con reducción de dimensionalidad balanceadas a 3 caractarísticas obtenemos una precisión del 0.9162
 - Con reducción de dimensionalidad balanceadas a 5 caractarísticas obtenemos una precisión del 0.6704
+En este caso, por la importancia relativa de las clases puede ser preferible permitir que el modelo se concentre más en la clase minoritaria o en la clase de mayor importancia, en lugar de tratar de equilibrar las clases. Eso se demuestra anteriormente donde ocupar balanceo de clases minimiza la precisión del clasificador.
 
 ## Problema 2.
 
