@@ -44,7 +44,7 @@ No hay datos faltantes en el dataset.
 | Precision  | 0.988 | 0.943 | 1.000 | 0.000      |        |
 
 El valor de Recall en la fila allow es de 1 lo que nos indica que el modelo es capaz de clasificar de manera correcta el 100% de las veces los datos pertenecientes a esta clase, pero al mirar el valor de Precision de la columna allow podemos notar que no es 1, sino que tiene un valor de 0.988 lo que significa que aunque clasifique de manera correcta todos los datos de la clase allow, no todos los datos clasificados como allow estan correctos ya que en este ejemplo tenemos 67 datos de tipo deny como falsos positivos.
-El valor de accuracy obtenido con este clasificador es de 0,9792 demostrando una alta precisión a la hora de clasificar los datos de manera correcta, lo que lo muestra como un clasificador muy exacto para optimizar la problemática.
+El valor de accuracy obtenido con este clasificador es de 0,9792 demostrando una alta precisión a la hora de clasificar los datos de manera correcta, lo que lo muestra como un clasificador muy exacto para optimizar la problemática, pero su accuracy promedio por clase es de 0,726 lo que nos puede indicar que existe un desbalance en la cantidad de muestra de las clases, esto se puede visualizar en la tabla ya que la clase reset-both no tiene ningún dato.
 
 ## 4. Ocupe alguno de los métodos vistos en clase para reducir la dimensión de las características del problema y evalúe su impacto en las soluciones obtenidas (compare las métricas de desempeño). Pruebe al menos con la mitad de las características y con dos características. 
 - Con reducción de dimensionalidad a 2 caractarísticas obtenemos una precisión del 0.7404
